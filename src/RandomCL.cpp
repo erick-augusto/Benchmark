@@ -2,8 +2,10 @@
 
 RandomCL::RandomCL()
 {
+    //ctor
 }
 
 RandomCL::~RandomCL()
 {
+    //dtor
 }
