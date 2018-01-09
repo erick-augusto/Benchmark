@@ -2,10 +2,8 @@
 
 Ordenacao::Ordenacao()
 {
-    //ctor
 }
 
 Ordenacao::~Ordenacao()
 {
-    //dtor
 }
