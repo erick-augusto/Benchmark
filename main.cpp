@@ -31,6 +31,9 @@ int main()
             for(k=0;k<n;k++){
                 vet[k] = gerador.nextr();
             }
+			t1 = clock();
+            qsort(vet, n, sizeof(unsigned int), compare);
+            t2 = clock();
 		}
 	}
 }
