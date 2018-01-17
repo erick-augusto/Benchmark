@@ -34,6 +34,9 @@ int main()
 			t1 = clock();
             qsort(vet, n, sizeof(unsigned int), compare);
             t2 = clock();
+			tempo[j] = (double) (t2-t1)/CLOCKS_PER_SEC*1000;
+            cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
+            delete vet;
 		}
 	}
 }
