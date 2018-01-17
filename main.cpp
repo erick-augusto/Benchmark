@@ -21,4 +21,10 @@ int main()
     double tempo[6];
     double media[9];
 
+	//QSort
+    cout << "   ***Testes do QSort***" << endl;
+    for(i=0;i<9;i++){
+        n = tamanho[i];
+		
+	}
 }
