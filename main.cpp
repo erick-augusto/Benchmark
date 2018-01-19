@@ -41,4 +41,17 @@ int main()
 		media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do QSort no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
 	}
+	
+	//Sort
+    cout << "   ***Testes do Sort***" << endl;
+    for(i=0;i<9;i++){
+        n = tamanho[i];
+        for(j=0;j<6;j++){
+            RandomCL<unsigned long int> gerador(i);
+            vet = new unsigned long int [n];
+            for(k=0;k<n;k++){
+                vet[k] = gerador.nextr();
+            }
+		}
+	}
 }
