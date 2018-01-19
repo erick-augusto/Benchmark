@@ -59,5 +59,7 @@ int main()
             cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
             delete vet;
 		}
+		media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
+        cout << "Media do Sort no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
 	}
 }
