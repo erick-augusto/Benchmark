@@ -21,28 +21,28 @@ int main()
     double tempo[6];
     double media[9];
 
-	//QSort
+    //QSort
     cout << "   ***Testes do QSort***" << endl;
     for(i=0;i<9;i++){
         n = tamanho[i];
-		for(j=0;j<6;j++){
+        for(j=0;j<6;j++){
             RandomCL<unsigned long int> gerador(i);
             vet = new unsigned long int [n];
             for(k=0;k<n;k++){
                 vet[k] = gerador.nextr();
             }
-			t1 = clock();
+            t1 = clock();
             qsort(vet, n, sizeof(unsigned int), compare);
             t2 = clock();
-			tempo[j] = (double) (t2-t1)/CLOCKS_PER_SEC*1000;
+            tempo[j] = (double) (t2-t1)/CLOCKS_PER_SEC*1000;
             //cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
             delete vet;
-		}
-		media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
+        }
+        media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do QSort no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
-	}
-	
-	//Sort
+    }
+
+    //Sort
     cout << "   ***Testes do Sort***" << endl;
     for(i=0;i<9;i++){
         n = tamanho[i];
@@ -52,14 +52,14 @@ int main()
             for(k=0;k<n;k++){
                 vet[k] = gerador.nextr();
             }
-			t1 = clock();
+            t1 = clock();
             sort(vet, vet+n);
             t2 = clock();
             tempo[j] = (double) (t2-t1)/CLOCKS_PER_SEC*1000;
-            cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
+            //cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
             delete vet;
-		}
-		media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
+        }
+        media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do Sort no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
-	}
+    }
 }
