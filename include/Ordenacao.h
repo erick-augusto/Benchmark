@@ -20,6 +20,10 @@ namespace ED {
 	template <typename T>
     void Ordenacao<T>::quicks_central(T *vet, int l, int r) {
 		if (r <= l) return;
+		int i, j;
+        i = (l+r)/2;
+        T pivo = vet[i]; vet[i] = vet[l]; vet[l] = pivo;
+        i = l; j = r;
 	}
 
 #endif
