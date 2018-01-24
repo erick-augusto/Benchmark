@@ -32,6 +32,9 @@ namespace ED {
             if (i==j) break;
             vet[j] = vet[i]; j--;
         }
+		vet[i] = pivo;
+        quicks_central(vet, l, i-1);
+        quicks_central(vet, i+1, r);
 	}
 
 #endif
