@@ -16,5 +16,10 @@ namespace ED {
             static void m_sort(T *vet, T *aux, int esq, int dir);
             static void merge(T *vet, T *aux, int esq, int meio, int dir);
     };
+	
+	template <typename T>
+    void Ordenacao<T>::quicks_central(T *vet, int l, int r) {
+		if (r <= l) return;
+	}
 
 #endif
