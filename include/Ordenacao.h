@@ -24,6 +24,14 @@ namespace ED {
         i = (l+r)/2;
         T pivo = vet[i]; vet[i] = vet[l]; vet[l] = pivo;
         i = l; j = r;
+		while (true) {
+            while ((j > i) && (vet[j] > pivo)) j--;
+            if (i==j) break;
+            vet[i] = vet[j]; i++;
+            while ((i < j) && (vet[i] < pivo)) i++;
+            if (i==j) break;
+            vet[j] = vet[i]; j--;
+        }
 	}
 
 #endif
