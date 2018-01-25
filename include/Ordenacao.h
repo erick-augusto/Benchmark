@@ -19,7 +19,10 @@ namespace ED {
 	
 	template <typename T>
     void Ordenacao<T>::heapify(T *vet, int pai, int heapsize) {
-	
+		int fl, fr, imaior;
+        fl = (pai << 1) + 1;
+        fr = fl + 1;
+		
 	}
 	
 	template <typename T>
