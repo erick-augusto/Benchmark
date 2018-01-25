@@ -41,6 +41,7 @@ namespace ED {
 	template <typename T>
     void Ordenacao<T>::heapsort(T *vet, int n) {
         int i;
+		for (i=(n>>1)-1; i>=0; i--) heapify(vet, i, n);
 	}
 	
 	template <typename T>
