@@ -84,22 +84,24 @@ int main()
         cout << "Media do Quick Central no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
 	
-	//HeapSort
+    //HeapSort
     cout << "   ***Testes do HeapSort***" << endl;
     for(i=0;i<9;i++){
         n = tamanho[i];
-		for(j=0;j<6;j++){
+        for(j=0;j<6;j++){
             RandomCL<unsigned long int> gerador(i);
             vet = new unsigned long int [n];
             for(k=0;k<n;k++){
                 vet[k] = gerador.nextr();
             }
-			t1 = clock();
+            t1 = clock();
             ED::Ordenacao<unsigned long int>::heapsort(vet, n);
             t2 = clock();
             tempo[j] = (double) (t2-t1)/CLOCKS_PER_SEC*1000;
-            cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
+            //cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
             delete vet;
-		}
-	}
+        }
+        media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
+        cout << "Media do HeapSort no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
+    }
 }
