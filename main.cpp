@@ -83,4 +83,10 @@ int main()
         media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do Quick Central no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
+	
+	//HeapSort
+    cout << "   ***Testes do HeapSort***" << endl;
+    for(i=0;i<9;i++){
+        n = tamanho[i];
+	}
 }
