@@ -76,5 +76,11 @@ namespace ED {
         m_sort(vet, aux , 0, n-1);
         delete aux;
     }
+	
+	template <typename T>
+    void Ordenacao<T>::merge(T *vet, T *aux, int esq, int meio, int dir) {
+        int i, j, k;
+        i = k = esq; j = meio+1;
+	}
 
 #endif
