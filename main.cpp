@@ -104,4 +104,10 @@ int main()
         media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do HeapSort no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
+	
+	//MergeSort
+    cout << "   ***Testes do MergeSort***" << endl;
+    for(i=0;i<9;i++){
+        n = tamanho[i];
+	}
 }
