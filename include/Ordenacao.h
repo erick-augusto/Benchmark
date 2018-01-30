@@ -85,6 +85,9 @@ namespace ED {
             if (vet[i] < vet[j]) aux[k++] = vet[i++];
             else aux[k++] = vet[j++];
         }
+		while (i <= meio) aux[k++] = vet[i++];
+        while (j <= dir) aux[k++] = vet[j++];
+        while (esq<=dir) vet[esq] = aux[esq++];
 	}
 
 #endif
