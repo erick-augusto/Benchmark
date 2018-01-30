@@ -94,6 +94,8 @@ namespace ED {
     void Ordenacao<T>::m_sort(T *vet, T *aux, int esq, int dir) {
 		if (dir <= esq) return;
         int meio = (dir + esq) >> 1;
+		m_sort(vet, aux, esq, meio);
+        m_sort(vet, aux, meio+1, dir);
 	}
 
 #endif
