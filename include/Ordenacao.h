@@ -70,32 +70,34 @@ namespace ED {
         quicks_central(vet, i+1, r);
 	}
 	
-	template <typename T>
+    template <typename T>
     void Ordenacao<T>::mergesort(T *vet, int n) {
         T *aux = new T[n];
         m_sort(vet, aux , 0, n-1);
         delete aux;
     }
-	
-	template <typename T>
+
+    template <typename T>
     void Ordenacao<T>::merge(T *vet, T *aux, int esq, int meio, int dir) {
         int i, j, k;
         i = k = esq; j = meio+1;
-		while ((i <= meio) && (j <= dir)) {
+        while ((i <= meio) && (j <= dir)) {
             if (vet[i] < vet[j]) aux[k++] = vet[i++];
             else aux[k++] = vet[j++];
         }
-		while (i <= meio) aux[k++] = vet[i++];
+        while (i <= meio) aux[k++] = vet[i++];
         while (j <= dir) aux[k++] = vet[j++];
         while (esq<=dir) vet[esq] = aux[esq++];
-	}
-	
-	template <typename T>
+    }
+
+    template <typename T>
     void Ordenacao<T>::m_sort(T *vet, T *aux, int esq, int dir) {
-		if (dir <= esq) return;
+        if (dir <= esq) return;
         int meio = (dir + esq) >> 1;
-		m_sort(vet, aux, esq, meio);
+        m_sort(vet, aux, esq, meio);
         m_sort(vet, aux, meio+1, dir);
-	}
+        if (vet[meio]<=vet[meio+1]) return;
+        merge(vet, aux, esq, meio, dir);
+    }
 
 #endif
