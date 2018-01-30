@@ -109,5 +109,12 @@ int main()
     cout << "   ***Testes do MergeSort***" << endl;
     for(i=0;i<9;i++){
         n = tamanho[i];
+		for(j=0;j<6;j++){
+            RandomCL<unsigned long int> gerador(i);
+            vet = new unsigned long int [n];
+            for(k=0;k<n;k++){
+                vet[k] = gerador.nextr();
+            }
+		}
 	}
 }
