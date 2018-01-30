@@ -89,5 +89,10 @@ namespace ED {
         while (j <= dir) aux[k++] = vet[j++];
         while (esq<=dir) vet[esq] = aux[esq++];
 	}
+	
+	template <typename T>
+    void Ordenacao<T>::m_sort(T *vet, T *aux, int esq, int dir) {
+		
+	}
 
 #endif
