@@ -81,6 +81,10 @@ namespace ED {
     void Ordenacao<T>::merge(T *vet, T *aux, int esq, int meio, int dir) {
         int i, j, k;
         i = k = esq; j = meio+1;
+		while ((i <= meio) && (j <= dir)) {
+            if (vet[i] < vet[j]) aux[k++] = vet[i++];
+            else aux[k++] = vet[j++];
+        }
 	}
 
 #endif
