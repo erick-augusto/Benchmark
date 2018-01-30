@@ -92,7 +92,8 @@ namespace ED {
 	
 	template <typename T>
     void Ordenacao<T>::m_sort(T *vet, T *aux, int esq, int dir) {
-		
+		if (dir <= esq) return;
+        int meio = (dir + esq) >> 1;
 	}
 
 #endif
