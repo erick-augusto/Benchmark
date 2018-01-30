@@ -69,5 +69,12 @@ namespace ED {
         quicks_central(vet, l, i-1);
         quicks_central(vet, i+1, r);
 	}
+	
+	template <typename T>
+    void Ordenacao<T>::mergesort(T *vet, int n) {
+        T *aux = new T[n];
+        m_sort(vet, aux , 0, n-1);
+        delete aux;
+    }
 
 #endif
