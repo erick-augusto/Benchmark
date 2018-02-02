@@ -102,6 +102,9 @@ namespace ED {
 	
 	template <typename T>
     void Ordenacao<T>:: shellSort_shell(T *vet, int n){
+		int i , j , h;
+        int aux;
+        h = n;
 		
 	}
 
