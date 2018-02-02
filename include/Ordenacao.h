@@ -99,5 +99,10 @@ namespace ED {
         if (vet[meio]<=vet[meio+1]) return;
         merge(vet, aux, esq, meio, dir);
     }
+	
+	template <typename T>
+    void Ordenacao<T>:: shellSort_shell(T *vet, int n){
+		
+	}
 
 #endif
