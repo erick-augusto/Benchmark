@@ -105,7 +105,13 @@ namespace ED {
 		int i , j , h;
         int aux;
         h = n;
-		
+		do {
+            h /= 2;
+            for (i = h; i < n; i++){
+                aux = vet[i];
+                j = i - h;
+			}
+		} while (h!=1);
 	}
 
 #endif
