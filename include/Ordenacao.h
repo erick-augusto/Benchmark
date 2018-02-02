@@ -100,18 +100,23 @@ namespace ED {
         merge(vet, aux, esq, meio, dir);
     }
 	
-	template <typename T>
+    template <typename T>
     void Ordenacao<T>:: shellSort_shell(T *vet, int n){
-		int i , j , h;
+        int i , j , h;
         int aux;
         h = n;
-		do {
+        do {
             h /= 2;
             for (i = h; i < n; i++){
                 aux = vet[i];
                 j = i - h;
-			}
-		} while (h!=1);
-	}
+                while ((j >= 0) && (aux < vet[j])){
+                    vet[j+h] = vet[j];
+                    j -= h;
+                }
+                vet[j+h] = aux;
+            }
+        } while (h!=1);
+    }
 
 #endif
