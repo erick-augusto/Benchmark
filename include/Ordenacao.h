@@ -124,6 +124,10 @@ namespace ED {
         int i , j , h;
         int aux;
         h = 1;
+		do { h = 3*h + 1; } while (h<n);
+        do {
+			h /= 3;
+		} while (h!=1);
 	}
 
 #endif
