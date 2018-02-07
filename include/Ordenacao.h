@@ -119,15 +119,24 @@ namespace ED {
         } while (h!=1);
     }
 	
-	template <typename T>
+    template <typename T>
     void Ordenacao<T>:: shellSort_knuth(T *vet, int n){
         int i , j , h;
         int aux;
         h = 1;
-		do { h = 3*h + 1; } while (h<n);
+        do { h = 3*h + 1; } while (h<n);
         do {
-			h /= 3;
-		} while (h!=1);
-	}
+            h /= 3;
+            for (i = h; i < n; i++){
+                aux = vet[i];
+                j = i - h;
+                while ((j >= 0) && (aux < vet[j])){
+                    vet[j+h] = vet[j];
+                    j -= h;
+                }
+                vet[j+h] = aux;
+            }
+        } while (h!=1);
+    }
 
 #endif
