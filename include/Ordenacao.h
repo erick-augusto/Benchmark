@@ -138,5 +138,13 @@ namespace ED {
             }
         } while (h!=1);
     }
+	
+	template <typename T>
+    void Ordenacao<T>:: shellSort_pardons(T *vet, int n){
+        int i , j , h, k = 0;
+        int aux;
+        int increments[] = {217378076, 45806244, 9651787, 2034035, 428481,
+        90358, 19001, 4025, 836, 182, 34, 9, 1};
+	}
 
 #endif
