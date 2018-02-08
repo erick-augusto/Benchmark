@@ -168,7 +168,7 @@ int main()
         cout << "Media do ShellSort-Knuth no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
 	
-	//ShellSort - Knuth
+    //ShellSort - Knuth
     cout << "   ***Testes do ShellSort-Pardons***" << endl;
     for(i=0;i<9;i++){
         n = tamanho[i];
@@ -178,12 +178,14 @@ int main()
             for(k=0;k<n;k++){
                 vet[k] = gerador.nextr();
             }
-			t1 = clock();
+            t1 = clock();
             ED::Ordenacao<unsigned long int>::shellSort_pardons(vet, n); // Faltam Atributos!!!
             t2 = clock();
             tempo[j] = (double) (t2-t1)/CLOCKS_PER_SEC*1000;
-            cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
+            //cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
             delete vet;
-		}
-	}
+        }
+        media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
+        cout << "Media do ShellSort-Pardons no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
+    }
 }
