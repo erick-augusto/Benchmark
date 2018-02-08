@@ -178,6 +178,12 @@ int main()
             for(k=0;k<n;k++){
                 vet[k] = gerador.nextr();
             }
+			t1 = clock();
+            ED::Ordenacao<unsigned long int>::shellSort_pardons(vet, n); // Faltam Atributos!!!
+            t2 = clock();
+            tempo[j] = (double) (t2-t1)/CLOCKS_PER_SEC*1000;
+            cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
+            delete vet;
 		}
 	}
 }
