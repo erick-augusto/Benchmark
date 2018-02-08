@@ -145,6 +145,10 @@ namespace ED {
         int aux;
         int increments[] = {217378076, 45806244, 9651787, 2034035, 428481,
         90358, 19001, 4025, 836, 182, 34, 9, 1};
+		while (increments[k]>n) k++;
+        do {
+            h = increments[k++] ;
+		} while (h!=1);
 	}
 
 #endif
