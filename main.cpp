@@ -168,7 +168,7 @@ int main()
         cout << "Media do ShellSort-Knuth no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
 	
-    //ShellSort - Knuth
+    //ShellSort - Pardons
     cout << "   ***Testes do ShellSort-Pardons***" << endl;
     for(i=0;i<9;i++){
         n = tamanho[i];
@@ -187,5 +187,18 @@ int main()
         }
         media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do ShellSort-Pardons no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
+    }
+	
+	//BubbleSort
+    cout << "   ***Testes do BubbleSort***" << endl;
+    for(i=0;i<9;i++){
+        n = tamanho[i];
+        for(j=0;j<6;j++){
+            RandomCL<unsigned long int> gerador(i);
+            vet = new unsigned long int [n];
+            for(k=0;k<n;k++){
+                vet[k] = gerador.nextr();
+            }
+        }
     }
 }
