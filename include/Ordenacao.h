@@ -24,6 +24,14 @@ namespace ED {
 		bool troca;
 		for (int i=n-1; i>0; i--) {
 			troca = false;
+			for (int j=0; j<i; j++)
+            if (vet[j+1] < vet[j]) {
+                temp = vet[j];
+                vet[j] = vet[j+1];
+                vet[j+1] = temp;
+                troca = true;
+            }
+			if (!troca) return;
 		}
 	}
 
