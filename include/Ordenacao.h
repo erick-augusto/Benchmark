@@ -5,6 +5,7 @@ namespace ED {
     template <typename T>
     class Ordenacao {
         public:
+			static void bubbleSort(T *vet, int n);
             static void heapsort(T *vet, int n);
             static void quicks_central(T *vet, int l, int r);
             static void mergesort(T *vet, int n);
@@ -17,6 +18,15 @@ namespace ED {
             static void merge(T *vet, T *aux, int esq, int meio, int dir);
     };
 	
+	template <class T>
+	void Ordenacao<T>::bubbleSort(T *vet, int n) {
+		T temp;
+		bool troca;
+		for (int i=n-1; i>0; i--) {
+			troca = false;
+		}
+	}
+
     template <typename T>
     void Ordenacao<T>::heapify(T *vet, int pai, int heapsize) {
         int fl, fr, imaior;
@@ -49,7 +59,7 @@ namespace ED {
             heapify(vet, 0, i);
         }
     }
-	
+
 	template <typename T>
     void Ordenacao<T>::quicks_central(T *vet, int l, int r) {
 		if (r <= l) return;
@@ -69,7 +79,7 @@ namespace ED {
         quicks_central(vet, l, i-1);
         quicks_central(vet, i+1, r);
 	}
-	
+
     template <typename T>
     void Ordenacao<T>::mergesort(T *vet, int n) {
         T *aux = new T[n];
@@ -99,7 +109,7 @@ namespace ED {
         if (vet[meio]<=vet[meio+1]) return;
         merge(vet, aux, esq, meio, dir);
     }
-	
+
     template <typename T>
     void Ordenacao<T>:: shellSort_shell(T *vet, int n){
         int i , j , h;
@@ -118,7 +128,7 @@ namespace ED {
             }
         } while (h!=1);
     }
-	
+
     template <typename T>
     void Ordenacao<T>:: shellSort_knuth(T *vet, int n){
         int i , j , h;
@@ -138,7 +148,7 @@ namespace ED {
             }
         } while (h!=1);
     }
-	
+
     template <typename T>
     void Ordenacao<T>:: shellSort_pardons(T *vet, int n){
         int i , j , h, k = 0;
