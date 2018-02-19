@@ -125,6 +125,14 @@ namespace ED {
 		int imenor, i, j;
 		for (i = 0; i < n - 1; i++) {
 			imenor = i;
+			for (j = i + 1; j < n; j++){
+				if (vet[j] < vet[imenor]){
+					imenor = j;
+				}
+			}
+			temp = vet[i];
+			vet[i] = vet[imenor];
+			vet[imenor] = temp;
 		}
 	}
 
