@@ -118,6 +118,15 @@ namespace ED {
         if (vet[meio]<=vet[meio+1]) return;
         merge(vet, aux, esq, meio, dir);
     }
+	
+	template <class T>
+	void bubbleSort(T *vet, int n) {
+		T temp;
+		bool troca;
+		for (int i=n-1; i>0; i--) {
+			troca = false;
+		}
+	}
 
     template <typename T>
     void Ordenacao<T>:: shellSort_shell(T *vet, int n){
