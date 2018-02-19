@@ -120,11 +120,11 @@ namespace ED {
     }
 	
 	template <class T>
-	void bubbleSort(T *vet, int n) {
-		T temp;
-		bool troca;
-		for (int i=n-1; i>0; i--) {
-			troca = false;
+	void selectSort(T *vet, int n) {
+		int temp;
+		int imenor, i, j;
+		for (i = 0; i < n - 1; i++) {
+			imenor = i;
 		}
 	}
 
