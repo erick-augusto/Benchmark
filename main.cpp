@@ -210,7 +210,7 @@ int main()
         cout << "Media do BubbleSort no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
 	
-	//SelectSort
+    //SelectSort
     cout << "   ***Testes do SelectSort***" << endl;
     for(i=0;i<9;i++){
         n = tamanho[i];
@@ -220,12 +220,14 @@ int main()
             for(k=0;k<n;k++){
                 vet[k] = gerador.nextr();
             }
-			t1 = clock();
+            t1 = clock();
             ED::Ordenacao<unsigned long int>::selectSort(vet, n);
             t2 = clock();
             tempo[j] = (double) (t2-t1)/CLOCKS_PER_SEC*1000;
-            cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
+            //cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
             delete vet;
-		}
-	}
+        }
+        media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
+        cout << "Media do SelectSort no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
+    }
 }
