@@ -9,6 +9,7 @@ namespace ED {
             static void heapsort(T *vet, int n);
             static void quicks_central(T *vet, int l, int r);
             static void mergesort(T *vet, int n);
+            static void selectSort(T *vet, int n);
             static void shellSort_shell(T *vet, int n);
             static void shellSort_knuth(T *vet, int n);
             static void shellSort_pardons(T *vet, int n);
