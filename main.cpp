@@ -245,9 +245,11 @@ int main()
             ED::Ordenacao<unsigned long int>::insertSort(vet, n);
             t2 = clock();
             tempo[j] = (double) (t2-t1)/CLOCKS_PER_SEC*1000;
-            cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
+            //cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
             delete vet;
         }
+        media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
+        cout << "Media do InsertSort no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
     return 0;
 }
