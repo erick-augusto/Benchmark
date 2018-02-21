@@ -5,8 +5,9 @@ namespace ED {
     template <typename T>
     class Ordenacao {
         public:
-			static void bubbleSort(T *vet, int n);
+            static void bubbleSort(T *vet, int n);
             static void heapsort(T *vet, int n);
+            static void insertSort(T *vet, int n);
             static void quicks_central(T *vet, int l, int r);
             static void mergesort(T *vet, int n);
             static void selectSort(T *vet, int n);
