@@ -62,8 +62,8 @@ int main()
         media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do Sort no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
-	
-	//Quick CentralSort
+
+    //Quick CentralSort
     cout << "   ***Testes do Quick Central***" << endl;
     for(i=0;i<9;i++){
         n = tamanho[i];
@@ -83,7 +83,7 @@ int main()
         media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do Quick Central no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
-	
+
     //HeapSort
     cout << "   ***Testes do HeapSort***" << endl;
     for(i=0;i<9;i++){
@@ -104,7 +104,7 @@ int main()
         media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do HeapSort no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
-	
+
     //MergeSort
     cout << "   ***Testes do MergeSort***" << endl;
     for(i=0;i<9;i++){
@@ -116,7 +116,7 @@ int main()
                 vet[k] = gerador.nextr();
             }
             t1 = clock();
-            ED::Ordenacao<unsigned long int>::mergesort(vet, n);
+            ED::Ordenacao<unsigned long int>::mergesort(vet, n); // Faltam Atributos!!!
             t2 = clock();
             tempo[j] = (double) (t2-t1)/CLOCKS_PER_SEC*1000;
             //cout << "Saida " << i+1 << "." << j+1 << ": " << tempo[j] << "ms" << endl;
@@ -125,7 +125,7 @@ int main()
         media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do MergeSort no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
-	
+
     //ShellSort - Shell
     cout << "   ***Testes do ShellSort-Shell***" << endl;
     for(i=0;i<9;i++){
@@ -146,7 +146,7 @@ int main()
         media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do ShellSort-Shell no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
-	
+
     //ShellSort - Knuth
     cout << "   ***Testes do ShellSort-Knuth***" << endl;
     for(i=0;i<9;i++){
@@ -167,8 +167,8 @@ int main()
         media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do ShellSort-Knuth no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
-	
-    //ShellSort - Pardons
+
+    //ShellSort - Knuth
     cout << "   ***Testes do ShellSort-Pardons***" << endl;
     for(i=0;i<9;i++){
         n = tamanho[i];
@@ -188,8 +188,8 @@ int main()
         media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do ShellSort-Pardons no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
-	
-	//BubbleSort
+
+    //BubbleSort
     cout << "   ***Testes do BubbleSort***" << endl;
     for(i=0;i<9;i++){
         n = tamanho[i];
@@ -209,7 +209,7 @@ int main()
         media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do BubbleSort no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
-	
+
     //SelectSort
     cout << "   ***Testes do SelectSort***" << endl;
     for(i=0;i<9;i++){
@@ -230,7 +230,7 @@ int main()
         media[i] = (tempo[0]+tempo[1]+tempo[2]+tempo[3]+tempo[4]+tempo[5])/6;
         cout << "Media do SelectSort no caso " << i+1 << ": " << media[i] << "ms\n" << endl;
     }
-	
+
 	//InsertSort
     cout << "   ***Testes do InsertSort***" << endl;
     for(i=0;i<9;i++){
