@@ -19,7 +19,7 @@ namespace ED {
             static void m_sort(T *vet, T *aux, int esq, int dir);
             static void merge(T *vet, T *aux, int esq, int meio, int dir);
     };
-	
+
 	template <class T>
 	void Ordenacao<T>::bubbleSort(T *vet, int n) {
 		T temp;
@@ -132,9 +132,9 @@ namespace ED {
         if (vet[meio]<=vet[meio+1]) return;
         merge(vet, aux, esq, meio, dir);
     }
-	
+
 	template <class T>
-	void selectSort(T *vet, int n) {
+	void Ordenacao<T>::selectSort(T *vet, int n) {
 		int temp;
 		int imenor, i, j;
 		for (i = 0; i < n - 1; i++) {
